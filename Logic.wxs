@@ -1,0 +1,4 @@
+//在wxs文件(微信脚本文件)中引用其他模块数据时，可以使用require函数
+var tools=require('Common.wxs');
+tools.FOO='Hello';
+module.exports = tools;

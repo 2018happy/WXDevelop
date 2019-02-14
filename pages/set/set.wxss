@@ -1,0 +1,34 @@
+/*@import语句:用于将指定路径的样式文件中的内容导入到本样式文件中
+*/
+@import '../../Test.wxss';
+
+.test{
+  background:black;
+  height: 100px;
+}
+
+.FontColor1{
+  color:white;
+}
+
+.bgRed{
+  background: red;
+  height: 50rpx;
+  width: 300rpx;
+  text-align: center;
+  font-size: 26rpx;
+  padding-top: 10rpx;
+}
+
+.bgGreen{
+  background: green;
+  height: 100px;
+}
+
+.bgBlue{
+  background:blue;
+    /****/
+  height: 100px
+  }
+
+

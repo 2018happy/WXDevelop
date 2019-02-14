@@ -1,0 +1,18 @@
+var foo='Hello World from tools.wxs';
+var bar=function(d){
+return d;
+}
+
+//把模块内的函数/对象/变量全部封装成Json对象，这样在暴露该模块时方便
+//其他模块调用其内部的函数/对象/变量
+var Object1={
+  FOO:foo,
+  BAR:bar
+}
+
+//1.每个wxs文件和<wxs>标签都是一个单独的模块
+//2.默认情况下，如果不显式将模块对外暴露，其他模块是无法引用
+//该模块的数据或功能
+//3.module对象，每一个模块都内置有一个module对象，通过module对象
+//的exports属性暴露模块内的数据
+module.exports=Object1;

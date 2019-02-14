@@ -1,0 +1,10 @@
+.FontColor{
+  color:white;
+  background-color: green;
+  /*'rpx":响应式像素单位；微信小程序将所有支持微信的手机屏幕
+  划分成750等份，"每一等份"等于1 rpx.例如：iphone6的手机屏
+  为375px,划分成750等份后，每一等份为0.5px(375px/750),则
+  针对iPhone6这款手机屏幕而言，1rpx=0.5px,其他手机品牌的
+  屏幕rpx换算同理*/
+  width: 600rpx;
+}

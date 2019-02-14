@@ -1,0 +1,18 @@
+
+<!--定义模板1-->
+<template name='MsgItem'>
+<block>
+<view>{{index}}:{{msg}}</view>
+<view>Time:{{time}}</view>
+</block>
+</template>
+
+<!--定义模板2-->
+<template name='odd'>
+<view>odd</view>
+</template>
+
+<!--定义模板3-->
+<template name='even'>
+<view>even</view>
+</template>
