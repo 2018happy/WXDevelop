@@ -1,7 +1,7 @@
 //AppSecret密钥:ace1909fa14f47966a07c276785c3fde
 //APPID:wx72808370c1393af8
 //{"access_token":"18_ojAJ95LdMtVfjliDGSxwOaG-j8hsHOTEQWf1KmHO_5VNjX4_TdVtybL32ozWNAT7Ulo1d2QsCNrWTr0oQvSDdtUsbpQRArYMJhvZqA3Bc-lXdbXgTq0qgeCZ-7rUsl3bIyeVabaZtWn_iEUFXEKgAGASZF","expires_in":7200}
-
+//666666
 var Pg;
 // pages/Index01/Index01.js
 Page({
