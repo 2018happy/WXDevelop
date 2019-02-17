@@ -1,0 +1,7 @@
+/* pages/Index01/Index01.wxss */
+.NewList{
+  padding: 10px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}

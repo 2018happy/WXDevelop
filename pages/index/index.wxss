@@ -1,0 +1,57 @@
+.Hover1{
+  background-color: green;
+  color:white;
+  opacity: 0.1
+}
+
+.Bg1{
+background-color: blue
+}
+
+.Bg2{
+background-color: bisque
+}
+
+.Bg3{
+background-color: royalblue
+}
+
+.Bg4{
+background-color: rosybrown
+}
+
+.Bg5{
+background-color: red
+}
+
+.Bg6{
+background-color: rebeccapurple
+}
+
+/**
+.scroll-view_H{
+white-space: nowrap
+}
+**/
+
+/**
+.scroll-view-item-H{
+  width: 33%;
+  height: 300rpx;
+  }**/
+
+  .Display1{
+ /**把当前组件设置成块级组件**/
+  display:block;
+  }
+
+/**'Display'属性:控制组件的显示方式**/
+  .Display2{
+    /**把当前组件设置成行级组件,但是当一个或多个组件的内容
+    超出一行范围时，本行内最后一个组件的内容会自动换行**/
+    /**display: inline-block;**/
+    /**把当前组件设置成行级组件,无论一个或多个组件的内容
+    是否超出一行范围，这些内容始终排成一行**/
+    display: inline;
+  }
+ 

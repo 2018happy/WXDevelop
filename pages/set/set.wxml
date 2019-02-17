@@ -1,0 +1,47 @@
+<!-- 视图层代码 -->
+<scroll-view>
+
+<view class='bgRed' hover-class='FontColor1'>你好 我也好 </view>
+<!--include可以将指定路径下的"wxml文件"中除了<Template>组件和<wxs>
+组件外的所有组件引入到另外一个"wxml文件"的指定位置-->
+<include src='../../Boxes/Header.wxml' />
+<view class='bgGreen'></view>
+<!--当”view“样式(如bgBlue)中没有加"height"属性进行
+高度定义的时候，小程序默认根据view内的内容自动变化高度-->
+<view  class='bgBlue'>你好 \n 我也好</view>
+
+<!--"wx:for-item"属性:将该属性值作为"循环变量"的名字。-->
+<!--"wx:for-index"属性:将该属性值作为"循环变量"对应的索引变量名称-->
+<view wx:for="{{Array}}" wx:for-item='items' wx:for-index='No'>{{No+1}}:{{items}}</view>
+<!--wx:if属性:控制所对应的组件是否渲染，属性值为True代表渲染，属性值为false代表不渲染-->
+<view wx:if='{{true}}' class='bgGreen'></view>
+<!--hidden属性:控制是否隐藏所对应的组件，属性值为true代表隐藏，属性值为false代表不隐藏；
+无论"hidden属性值"为"true"或"false",其所对应的组件都会进行渲染，但是"wx:if属性值"为true
+时，其所对应的组件才会渲染，否则不会渲染。
+""-->
+<view hidden='{{true}}'  class='bgBlue'></view>
+<!--"wx:for属性"：遍历该属性值对应的数组，并且每遍历一个元素，就会自动生成一个组件，每一个
+生成的组件都会自动继承源组件的样式.(注意:如果组件中具有"wx:for属性"及其属性值，那么该组件中
+内容一定得输出每一次遍历的元素的相关内容，否则平台将不会遍历"wx:for属性"值对应的数组)-->
+<view wx:for='{{Array1}}' class='bgRed'>{{item.message}}</view>
+<!--<block>标签:"block"组件一般结合"wx:for属性"一起使用，被"block"组件包含的子组件
+会跟随每一次遍历自动生成"一组相同数量的子组件"-->
+<block wx:for='{{[1,2,3]}}'>
+<view>1</view>
+<view>2</view>
+</block>
+<!--视图组件的自定义属性可以有任意多个，自定义属性名称必须符合"data-{自定义名称}"命名规则-->
+<view bindtap='MyTap' data-name='Value' data-name1='Value1' data-name2='Value2'>点我一下</view>
+
+
+<!--import组件用于引入指定路径的'wxml'文件的"模板组件内容"，但不包含该'wxml文件'所引入(import)的"模板组件内容"-->
+<import src='../../Template/Tem01.wxml'></import>
+<!--使用模板-->
+<!--
+1."is属性":表示引用的模板名称；
+2."data属性":被引用模板的数据源;
+-->
+<template is='MsgItem' data='{{...Item}}' />
+
+<view class='FontColor'>微信平台样式表</view>
+</scroll-view>

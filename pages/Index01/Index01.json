@@ -1,0 +1,5 @@
+{
+  "enablePullDownRefresh": true,
+  "LoadingStyle":"以下为下拉加载动画样式",
+  "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,45 @@
+<!--<wxs>标签表示引进外部一个模块；module属性表示引进模块的别名，以方便视图页面进行调用-->
+<wxs src='../../Logic.wxs' module='tools' />
+<!--'scroll-x'属性:控制当显示内容超出屏幕宽度时是否支持横向滑动-->
+<scroll-view class='scroll-view_H' scroll-x='{{true}}' style='width:100%'>
+<!--微信小程序需要运用到专门的标记语言和样式语言进行开发-->
+<!--{{变量名}}是微信小程序平台内置的动态数据绑定语法-->
+<view>{{tools.FOO}}</view>
+<view>{{Version}}</view>
+<!--'hover-class'属性:表示鼠标点击该组件时会应用对应的样式-->
+<view hover-class='Hover1'>你好</view>
+<!--”{{}}“还可以进行各种类型的运算-->
+<!--1.三目运算-->
+<view hidden='{{Flag ? false:true}}'>我也好</view>
+<!--2.字符连接运算-->
+<view>{{name + Age}}</view>
+<!--3.数字运算-->
+<view>{{Age1+Age2}}</view>
+<view>{{Array[0]}}和{{Array[1]}}</view>
+<!--当几个行级组件的内容超出一行时，超出部分的内容不会自动换行-->
+<label >111111111111111111111</label>
+<label >222222222222222222222</label>
+<label >333333333333333333333</label>
+<label >444444444444444444444</label>
+<label >555555555555555555555</label>
+<label >666666666666666666666</label>
+
+<!--当行级组件变块级组件时，一个组件占据一行-->
+<label class='Display1'>111111111111111111111</label>
+<label class='Display1'>222222222222222222222</label>
+<label class='Display1'>333333333333333333333</label>
+<label class='Display1'>444444444444444444444</label>
+<label class='Display1'>555555555555555555555</label>
+<label class='Display1'>666666666666666666666</label>
+
+<!---->
+<view class='Bg1 scroll-view-item-H Display2'>111111111111</view>
+<view class='Bg2 scroll-view-item-H Display2'>222222222222</view>
+<view class='Bg3 scroll-view-item-H Display2'>333333333333</view>
+<view class='Bg4 scroll-view-item-H Display2'>444444444444</view>
+<view class='Bg5 scroll-view-item-H Display2'>555555555555</view>
+<view class='Bg6 scroll-view-item-H Display2'>666666666666</view>
+
+<button bindtap='Request1'>普通Get</button>
+<button bindtap='Request2'>普通Post</button>
+</scroll-view>
