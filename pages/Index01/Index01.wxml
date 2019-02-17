@@ -1,1 +1,8 @@
+<!---->
+<scroll-view scroll-y='{{true}}' style='height:200px'>
 <view class='NewList' wx:for='{{lists}}'>{{item}}</view>
+<view class='LoadingMore' hidden='{{IfHide}}'>{{LoadingMsg}}</view>
+</scroll-view>
+<!---->
+
+

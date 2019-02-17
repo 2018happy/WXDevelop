@@ -5,3 +5,10 @@
   border-bottom-style: solid;
   border-bottom-color: black;
 }
+
+.LoadingMore{
+  text-align: center;
+  height: 40px;
+  line-height: 50px;
+}
+

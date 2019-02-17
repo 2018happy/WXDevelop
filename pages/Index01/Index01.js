@@ -29,6 +29,7 @@ Page({
 var Arr=[];
 //'wx.request'函数:微信小程序平台提供的'接入函数'
 function GetList(){
+  Pg.setData({'LoadingMsg':'正在加载中，请耐心等待!','IfHide':false});
   //显示导航条加载动画
   wx.showNavigationBarLoading();
   wx.request({
@@ -39,6 +40,7 @@ function GetList(){
       Arr = Arr.concat(res.data.split('--'));
     console.log(Arr);
     Pg.setData({'lists':Arr});
+    Pg.setData({'LoadingMsg':'加载已经完成','IfHide':true});
     },
     complete:function(){
       //隐藏导航条加载动画
