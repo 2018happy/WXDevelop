@@ -5,6 +5,9 @@
 var Pg;
 // pages/Index01/Index01.js
 Page({
+  data:{
+  
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -12,7 +15,12 @@ Page({
     Pg=this;
     //开始下拉刷新动作
     wx.startPullDownRefresh();
-    GetList()
+    wx.getSystemInfo({
+      success: function(res) {
+        Pg.setData({'ViewHight':res.windowHeight});
+      },
+    })
+    GetList();
   },
   onReachBottom:function(){
     GetList();
@@ -22,13 +30,14 @@ Page({
    */
   onPullDownRefresh: function(){
     GetList();
-  }
-
+  },
+  ScrollToLower: GetList
 });
 
 var Arr=[];
 //'wx.request'函数:微信小程序平台提供的'接入函数'
 function GetList(){
+  
   Pg.setData({'LoadingMsg':'正在加载中，请耐心等待!','IfHide':false});
   //显示导航条加载动画
   wx.showNavigationBarLoading();

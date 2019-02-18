@@ -1,5 +1,5 @@
-<!---->
-<scroll-view scroll-y='{{true}}' style='height:200px'>
+<!--'scroll-view组件'可以利用样式定义滚动区域的高度-->
+<scroll-view bindscrolltolower='ScrollToLower' scroll-y='{{true}}' style='height:{{ViewHight}}px' >
 <view class='NewList' wx:for='{{lists}}'>{{item}}</view>
 <view class='LoadingMore' hidden='{{IfHide}}'>{{LoadingMsg}}</view>
 </scroll-view>
