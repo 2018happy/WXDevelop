@@ -1,0 +1,6 @@
+<view>昵称:{{NickName}}</view>
+<view>OpenID:</view>
+<image src='{{PicUrl}}'></image>
+<view>
+<button bindtap='Login'>登陆</button>
+</view>

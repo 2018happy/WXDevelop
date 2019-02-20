@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/Index02/Index02",
     "pages/Index01/Index01",
     "pages/index/index",
     "pages/set/set",
-    "pages/logs/logs"
+    "pages/logs/logs"   
   ],
   "window": {
     "backgroundTextStyle": "light",
