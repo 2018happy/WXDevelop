@@ -15,15 +15,22 @@ Page({
     //唯一标识。(openid)
   wx.login({
     success:function(res1){     
-    console.log(res1.code);
+    Code=res1.code;
+    console.log(Code);
     wx.getUserInfo({
       success:function(res2){
       //console.log(res2);
       Self.setData({'NickName':res2.userInfo.nickName});
       Self.setData({'PicUrl':res2.userInfo.avatarUrl});
+      //访问后台服务器获取
+      //访问后台服务器获取当前用户的APPID
     wx.request({
-      url:'',
-      data:''
+      url:'http://localhost:52581/UserInfo/GetOpenID',
+      data: {Code:Code},
+      method:'POST',
+      success:function(Res3){
+      
+      }
     })
       }
     })
