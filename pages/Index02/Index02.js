@@ -10,17 +10,21 @@ Page({
   },
   Login:function(){
     Self = this;
-    //'wx.login'函数：获取用户登陆凭证(返回Json对象中的code属性；其实该函数的目的是为了后续根据'用户登陆凭证'
-    //来获取登陆用户的唯一标识(openid)
+    //'wx.login'函数：获取用户登陆凭证(用户登陆凭证存储在返回的Json对象的code属性中，'用户登陆凭证信息'有效期'
+    //为5分钟，超出有效期需要重新获取；'获取用户登陆凭证'的最终目的是为了后续根据'用户登陆凭证'来获取登陆用户的
+    //唯一标识。(openid)
   wx.login({
     success:function(res1){     
-    //console.log(res);
-    res1.code;
+    console.log(res1.code);
     wx.getUserInfo({
       success:function(res2){
       //console.log(res2);
       Self.setData({'NickName':res2.userInfo.nickName});
       Self.setData({'PicUrl':res2.userInfo.avatarUrl});
+    wx.request({
+      url:'',
+      data:''
+    })
       }
     })
     }
