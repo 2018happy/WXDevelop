@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //将键值对信息异步存储到手机中，永久存储
+    //将键值对信息异步存储到手机中(永久存储)
    wx.setStorage({
      key: 'Name',
      data: [{'Kate':'666666'},{'Kate0':'999999'}],
@@ -20,7 +20,21 @@ Page({
        console.log('Ok');
      }
    });
-   
+
+   //将键值对信息同步存储到手机中(永久存储)
+   wx.setStorageSync('Name','666666');
+
+   //将键值对信息异步从手机中读取出来
+   wx.getStorage({
+     key: 'Name',
+     success: function(res) {
+       console.log(res);
+     },
+   });
+  
+  //根据键名同步读取手机中的键值信息
+   var Value= wx.getStorageSync('Name');
+   console.log(Value);
 
 
   },
